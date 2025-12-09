@@ -286,10 +286,25 @@ with st.sidebar:
     """)
 
 # ファイルアップローダー
+st.markdown("""
+<style>
+    [data-testid="stFileUploader"] section > div {
+        padding: 2rem 1rem;
+    }
+    [data-testid="stFileUploader"] section > div > small {
+        display: none;
+    }
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown("### 音声ファイルをアップロード")
+st.info("ファイルをここにドラッグ＆ドロップするか、「Browse files」をクリックしてファイルを選択してください")
+
 uploaded_file = st.file_uploader(
-    "音声ファイルをアップロード",
+    "音声ファイル",
     type=["mp3", "wav", "m4a", "ogg", "flac"],
-    help="会議の録音ファイルをアップロードしてください"
+    help="会議の録音ファイルをアップロードしてください",
+    label_visibility="collapsed"
 )
 
 if uploaded_file is not None:
@@ -315,8 +330,7 @@ if uploaded_file is not None:
 
     with col2:
         st.markdown("**高精度モード**")
-        st.caption("2段階処理で精度向上（処理時間約2倍）")
-        st.caption("⚠️ 頻繁な使用は控えてください")
+        st.caption("⚠️ 頻繁な使用は控えてください(2段階処理で精度向上)")
         high_accuracy_button = st.button("高精度生成", type="secondary", use_container_width=True)
 
     # 通常モードの処理
