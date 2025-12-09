@@ -131,7 +131,7 @@ with st.sidebar:
 
     st.divider()
     st.markdown("### 📊 モデル情報")
-    st.info("Google Gemini 2.0 Flash")
+    st.info("Google Gemini 2.5 Flash")
 
 # ファイルアップローダー
 uploaded_file = st.file_uploader(
