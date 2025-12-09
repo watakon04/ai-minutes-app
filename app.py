@@ -274,6 +274,8 @@ with st.sidebar:
     **処理時間**:
     - 通常モード: 1〜5分程度
     - 高精度モード: 2〜10分程度（約2倍）
+
+    **注意**: 高精度モードはコストが高いため、通常モードで十分な場合はそちらをご利用ください。
     """)
 
     st.divider()
@@ -314,6 +316,7 @@ if uploaded_file is not None:
     with col2:
         st.markdown("**高精度モード**")
         st.caption("2段階処理で精度向上（処理時間約2倍）")
+        st.caption("⚠️ 頻繁な使用は控えてください")
         high_accuracy_button = st.button("高精度生成", type="secondary", use_container_width=True)
 
     # 通常モードの処理
