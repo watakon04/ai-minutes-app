@@ -65,8 +65,8 @@ def generate_minutes_with_gemini(audio_file, max_retries=3):
         progress_bar.progress(60)
 
         # 2. モデルの指定
-        # gemini-1.5-flash は無料ティアで利用可能で、音声処理に対応
-        model = genai.GenerativeModel("gemini-2.5-pro")
+        # gemini-2.5-flash は高速で効率的なモデルです
+        model = genai.GenerativeModel("gemini-2.5-flash")
 
         # 3. 議事録生成の指示
         prompt = """
