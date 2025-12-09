@@ -255,7 +255,9 @@ def generate_minutes_high_accuracy(audio_file, max_retries=3):
 
 # メインUI
 st.title("AI議事録作成ツール")
+st.markdown("**株式会社アドニスライフ 業務専用**")
 st.markdown("音声ファイルをアップロードすると、AIが自動で議事録を作成します。")
+st.warning("このツールは株式会社アドニスライフの業務専用です。業務以外での使用は禁止されています。")
 
 # サイドバー
 with st.sidebar:
@@ -374,6 +376,7 @@ st.markdown("---")
 st.markdown(
     """
     <div style='text-align: center'>
+        <p>株式会社アドニスライフ 業務専用ツール</p>
         <p>Powered by Google Gemini 2.5 Flash & Pro</p>
     </div>
     """,
