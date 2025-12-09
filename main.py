@@ -40,8 +40,8 @@ def generate_minutes_with_gemini(audio_file_path, max_retries=3):
     print(f"ファイルの最終状態: {myfile.state.name}")
 
     # 2. モデルの指定
-    # 'gemini-2.0-flash' は安定していて、音声処理に対応しています
-    model = genai.GenerativeModel("gemini-2.5-pro")
+    # 'gemini-2.5-flash' は高速で効率的なモデルです
+    model = genai.GenerativeModel("gemini-2.5-flash")
 
     # 3. 議事録生成の指示
     prompt = """
